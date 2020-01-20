@@ -10,6 +10,7 @@ node {
 	}
 
 	stage ('running app'){
+		bat "mvn clean"
 	bat "mvn install"
 	}
 }

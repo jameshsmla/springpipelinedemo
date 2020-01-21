@@ -6,6 +6,10 @@ node {
 		
 		def jdkpath=tool name: 'JAVA_HOME', type: 'jdk'
 		
+		
+		def pred=sh "pwd"
+		echo '-------------start version information ---------'
+		echo pred
 		echo '-------------start version information ---------'
 		
 	}

@@ -15,7 +15,7 @@ node {
 		sh "pwd"
 		sh "${mvnHome}/bin/mvn install"
 		echo '-------------current working directory---------'
-		sh "${pwd}/target"
+		sh "${pwd}"
 		echo '-------------current working directory---------'
 	}
 }

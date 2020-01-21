@@ -15,15 +15,6 @@ node {
 	}
 	stage ('running app'){
 		def mvnHome= tool name: 'M3', type: 'maven'
-		
-		sh "pwd"
-		sh "${mvnHome}/bin/mvn clean install"
-		echo '-------------current working directory---------'
-		sh "${pwd}"
-		echo '-------------current working directory---------'
-	}
-	stage ('Release'){
-		sh "sudo java -jar ${pwd}/workspace/petzey-services/target/pripelinedemoproject-0.0.1-SNAPSHOT.jar"
-		
+		sh "${mvnHome}/bin/mvn install"
 	}
 }

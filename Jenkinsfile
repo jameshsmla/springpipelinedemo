@@ -5,12 +5,12 @@ node {
 	stage('compile and packaging'){
 		
 		def jdkpath=tool name: 'JAVA_HOME', type: 'jdk'
-		def mvnHome= tool name: 'M3', type: 'maven'
+		
 		echo '-------------start version information ---------'
 		
 	}
 	stage ('running app'){
-		
-	sh "mvn install"
+		def mvnHome= tool name: 'M3', type: 'maven'
+		sh "${mvnHome}/bin/mvn install"
 	}
 }

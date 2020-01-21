@@ -17,9 +17,12 @@ node {
 		def mvnHome= tool name: 'M3', type: 'maven'
 		
 		sh "pwd"
-		sh "${mvnHome}/bin/mvn install"
+		sh "${mvnHome}/bin/mvn clean install"
 		echo '-------------current working directory---------'
 		sh "${pwd}"
 		echo '-------------current working directory---------'
+	}
+	stage ('Release'){
+		sh "java -jar /var/lib/jenkins/workspace/petzey-services/target/pripelinedemoproject-0.0.1-SNAPSHOT.jar"
 	}
 }

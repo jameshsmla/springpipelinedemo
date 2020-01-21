@@ -17,4 +17,7 @@ node {
 		def mvnHome= tool name: 'M3', type: 'maven'
 		sh "${mvnHome}/bin/mvn install"
 	}
+	stage('Release'){
+		sh "mvn spring-boot:run"
+	}
 }

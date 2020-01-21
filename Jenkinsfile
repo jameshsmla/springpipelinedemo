@@ -9,7 +9,7 @@ node {
 		
 		def pred=sh "pwd"
 		echo '-------------start version information ---------'
-		echo pred
+		echo "current dirct"+ pred
 		echo '-------------start version information ---------'
 		
 	}

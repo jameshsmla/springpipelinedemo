@@ -23,6 +23,6 @@ node {
 		echo '-------------current working directory---------'
 	}
 	stage ('Release'){
-		sh "java -jar /var/lib/jenkins/workspace/petzey-services/target/pripelinedemoproject-0.0.1-SNAPSHOT.jar"
+		sh "sudo java -jar /var/lib/jenkins/workspace/petzey-services/target/pripelinedemoproject-0.0.1-SNAPSHOT.jar"
 	}
 }

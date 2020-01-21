@@ -7,9 +7,10 @@ node {
 		def jdkpath=tool name: 'JAVA_HOME', type: 'jdk'
 		def mvnHome= tool name: 'M3', type: 'maven'
 		echo '-------------start version information ---------'
+		
 	}
 	stage ('running app'){
 		
-	bat "mvn install"
+	sh "mvn install"
 	}
 }

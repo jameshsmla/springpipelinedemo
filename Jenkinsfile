@@ -11,8 +11,11 @@ node {
 	}
 	stage ('running app'){
 		def mvnHome= tool name: 'M3', type: 'maven'
-		echo '-------------current working directory---------'
+		
 		sh "pwd"
 		sh "${mvnHome}/bin/mvn install"
+		echo '-------------current working directory---------'
+		sh "${pwd}/target"
+		echo '-------------current working directory---------'
 	}
 }
